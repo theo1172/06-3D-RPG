@@ -4,6 +4,9 @@ Use WASD to navigate the world and press the space bar to shoot targets
 
 ## Implementation
 Built in Godot 3.5.2
+Additional features:
+- health points
+- pause menu and menu themes
 
 ## References
 Blaster, character, drone, and target 3D assets from [kenney.nl](https://kenney.nl/)
