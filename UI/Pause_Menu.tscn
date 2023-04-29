@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Pause_Menu.gd" type="Script" id=2]
+[ext_resource path="res://UI/06_Menu_Theme.tres" type="Theme" id=3]
+
+[node name="Pause_Menu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+color = Color( 0.290196, 0.290196, 0.290196, 0.772549 )
+
+[node name="Game_Paused" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 299.0
+theme = ExtResource( 3 )
+text = "GAME PAUSED"
+align = 1
+valign = 1
+
+[node name="Continue" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -18.0
+margin_right = 100.0
+margin_bottom = 18.0
+rect_pivot_offset = Vector2( 0, -27 )
+text = "Continue"
+
+[node name="Quit" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = 40.0
+margin_right = 99.0
+margin_bottom = 76.0
+rect_pivot_offset = Vector2( 0, -27 )
+text = "Quit"
+
+[connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
